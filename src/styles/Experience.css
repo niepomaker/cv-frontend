@@ -1,0 +1,175 @@
+.experience-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+}
+.experience-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.experience-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.experience-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-controls button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.experience-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.experience-controls button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.experience-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease;
+}
+
+.experience-card {
+    flex: 0 0 320px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 175px;
+    text-align: center;
+    gap: 0.4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.experience-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-position {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+.experience-company {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    color: #ddd;
+}
+
+.experience-dates {
+    font-size: 1rem;
+    font-style: italic;
+    color: #aaa;
+    margin: 0;
+}
+
+.experience-tasks {
+    padding-left: 18px;
+}
+
+.experience-tasks li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+/* Expanded modal */
+.expanded-card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.expanded-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* odstępy między przyciskami */
+    flex-wrap: wrap; /* opcjonalnie: pozwala zawijać na mniejszych ekranach */
+    margin-top: 20px;
+}
+
+.nav-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 12px;
+    color: #00ccff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-button.active {
+    background: rgba(0, 191, 255, 0.3);
+    color: white;
+}

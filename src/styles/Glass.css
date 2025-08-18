@@ -1,0 +1,145 @@
+
+/* === Global Body === */
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background-attachment: fixed; /* 🔥 Dodaj to */
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* === Layout === */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch; /* upewnia się, że sidebar i main będą tej samej wysokości */
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .logo {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+/* === Nav Buttons === */
+.nav-button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  color: #00bfff;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-button:hover {
+  transform: scale(1.05);
+  background: rgba(0, 191, 255, 0.2);
+  color: #fff;
+}
+
+.nav-button.active {
+  background: rgba(0, 191, 255, 0.3);
+  color: white;
+}
+
+/* === Content Section === */
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Section Header === */
+.section-title {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === Glass Card === */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glass-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-card h3 {
+  margin-bottom: 0.2rem;
+  color: #fff;
+}
+
+.glass-card p, .glass-card li {
+  color: #ccc;
+}
+
+.glass-card ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

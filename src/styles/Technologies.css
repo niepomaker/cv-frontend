@@ -1,0 +1,99 @@
+.technologies-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 100px);
+}
+
+.technologies-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.technologies-position {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #ffffff;
+    text-align: center; /* <-- ważne */
+}
+
+.technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.tech-card {
+    width: 420px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.tech-heading {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: white;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;   /* <-- większa czcionka */
+    color: #f0f0f0;
+    text-align: left;
+}
+
+.tech-items {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.tech-items li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}

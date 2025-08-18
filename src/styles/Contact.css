@@ -1,0 +1,106 @@
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+}
+
+.contact-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* 1. Nowa siatka */
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* 2. Styl karty */
+.contact-card {
+    width: 300px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.contact-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.05);
+}
+
+/* 3. Nagłówek z ikoną */
+.contact-heading {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: white;
+    text-align: center; /* DODAJ TO */
+    width: 100%; /* PEWNIEJSZE DLA CENTROWANIA */
+}
+
+/* 4. Lista info */
+.contact-items {
+    list-style: none;
+    padding-left: 0;
+    text-align: left; /* DODAJ TO – to kluczowy krok */
+    width: 100%; /* zapewnia dobre wyrównanie */
+}
+
+/* 5. Własne "✔" zamiast bulletów (opcjonalne dla soft skills i języków) */
+.bullet-style li::before {
+    content: "✔";
+    color: #00ccff;
+    margin-right: 8px;
+}
+
+/* 6. Element listy */
+.contact-items li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* 7. Ikona inline */
+.icon-inline {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* 8. LinkedIn button */
+.linkedin-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.linkedin-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #0a66c2;
+}
