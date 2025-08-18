@@ -14,7 +14,7 @@ body {
 /* === Layout === */
 .app-container {
   display: flex;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   align-items: stretch; /* upewnia się, że sidebar i main będą tej samej wysokości */
 }
 
@@ -141,13 +141,16 @@ body {
 
 .main-layout {
   display: flex;
-  min-height: 100vh;
+  /*height: 100vh;*/
+  width: 100%;
+  overflow: hidden;
 }
 
 .main-content {
   flex: 1;
   display: flex;
-  justify-content: center; /* ⬅️ Wyśrodkowanie horyzontalne */
+  justify-content: center;
+  flex-direction: column; /* ⬅️ Wyśrodkowanie horyzontalne */
   align-items: center;     /* ⬅️ (opcjonalnie) wyśrodkowanie w pionie */
   padding: 2rem;
   overflow: hidden;

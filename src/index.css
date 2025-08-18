@@ -1,5 +1,6 @@
 html, #root {
     min-height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -8,7 +9,6 @@ html, #root {
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
-    min-height: 100vh;
 }
 
 body {
