@@ -10,8 +10,7 @@ const Home = () => {
                 <div className="glass-card">
                     <p>
                         I'm <strong>Łukasz Paprot</strong>, a passionate Java Developer with experience in
-                        creating <strong>robust backend systems</strong>, modern web applications, and
-                        automating workflows.
+                        creating <strong>robust backend systems</strong>, modern web applications
                     </p>
 
                     <p>
@@ -33,14 +32,14 @@ const Home = () => {
                     </p>
 
                     <p>
-                        Beyond technical proficiency, I am a <strong>supportive and collaborative team player</strong>
+                        Beyond technical proficiency, I am a <strong>supportive and collaborative team player </strong>
                         who values open communication and shared goals. My enthusiasm for learning and self-improvement
                         helps me embrace new challenges and grow both personally and professionally.
                     </p>
 
                     <p>
                         This is my interactive online CV where you can explore my{" "}
-                        <strong>experience</strong>, <strong>education</strong>, <strong>skills</strong>, and more.
+                        <strong>experience</strong>, <strong>education</strong>, <strong>skills</strong> and more.
                     </p>
 
                     <div className="button-group">

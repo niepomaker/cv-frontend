@@ -8,9 +8,7 @@
     min-height: calc(100vh - 100px);
 }
 .experience-list-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -54,14 +52,20 @@
 
 .experience-list {
     display: flex;
-    gap: 30px;
     justify-content: center;
     flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 1.5rem;
+    padding: 1rem 0;
     transition: transform 0.3s ease;
+    max-width: 100%;
 }
 
+
 .experience-card {
-    flex: 0 0 320px;
+    flex: 1 0 25%;
+    min-width: 250px;
+    margin: 0 0.5rem;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
@@ -73,10 +77,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 175px;
+    height: 200px;
     text-align: center;
     gap: 0.4rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.experience-list-wrapper {
+    overflow-x: hidden; /* ukrywa poziomy scroll */
 }
 
 .experience-card:hover {
@@ -172,4 +179,42 @@
 .nav-button.active {
     background: rgba(0, 191, 255, 0.3);
     color: white;
+}
+
+@media (max-width: 768px) {
+    .experience-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-card {
+        flex: 0 0 90%;
+        width: 90%;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .experience-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .experience-card {
+        flex: 0 0 calc((100% - 2rem) / 2); /* 2 karty */
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-card {
+        flex: 0 0 90%; /* 1 karta na mobilkach */
+    }
+
+    .experience-controls {
+        display: none; /* opcjonalnie – chowaj strzałki na mobile */
+    }
+}
+
+/* Chrome, Edge, Safari */
+.experience-list::-webkit-scrollbar {
+    display: none;
 }
