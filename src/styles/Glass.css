@@ -26,6 +26,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
 }
 
 .sidebar .logo {
@@ -138,8 +139,36 @@ body {
   padding-left: 1.5rem;
 }
 
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* ⬅️ Wyśrodkowanie horyzontalne */
+  align-items: center;     /* ⬅️ (opcjonalnie) wyśrodkowanie w pionie */
+  padding: 2rem;
+  overflow: hidden;
+}
+
 /* === Animation === */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    left: -9999px;
+  }
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
 }

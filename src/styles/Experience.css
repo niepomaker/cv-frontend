@@ -53,18 +53,16 @@
 .experience-list {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    overflow: hidden;
     gap: 1.5rem;
-    padding: 1rem 0;
-    transition: transform 0.3s ease;
-    max-width: 100%;
+    padding: 1rem;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 
 .experience-card {
     flex: 1 0 25%;
-    min-width: 250px;
+    width: 250px;
     margin: 0 0.5rem;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.05);
@@ -200,21 +198,24 @@
 
 @media (max-width: 1024px) {
     .experience-card {
-        flex: 0 0 calc((100% - 2rem) / 2); /* 2 karty */
+        width: 45%;
     }
 }
 
 @media (max-width: 768px) {
+    .experience-container {
+        padding-left: 20px; /* usuwamy padding na mobile */
+    }
+
     .experience-card {
-        flex: 0 0 90%; /* 1 karta na mobilkach */
+        width: 90%;
+    }
+
+    .experience-list {
+        justify-content: center;
     }
 
     .experience-controls {
-        display: none; /* opcjonalnie – chowaj strzałki na mobile */
+        display: none;
     }
-}
-
-/* Chrome, Edge, Safari */
-.experience-list::-webkit-scrollbar {
-    display: none;
 }
