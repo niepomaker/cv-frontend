@@ -1,5 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
 import "../styles/Glass.css";
+import TicTacToe from "../components/TicTacToe";
 
 const Layout = () => {
   return (
@@ -13,6 +14,7 @@ const Layout = () => {
                 <NavLink to="/education" className="nav-button">Education</NavLink>
                 <NavLink to="/technologies" className="nav-button">Technologies</NavLink>
                 <NavLink to="/hobbies" className="nav-button">Hobbies</NavLink>
+                <NavLink to="/projects" className="nav-button">Projects</NavLink>
                 <NavLink to="/contact" className="nav-button">About Me</NavLink>
             </ul>
           </nav>

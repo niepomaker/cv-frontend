@@ -18,6 +18,7 @@
     margin-bottom: 30px;
     color: #ffffff;
     text-align: center;
+
 }
 
 .experience-controls {
@@ -152,8 +153,8 @@
 .button-group {
     display: flex;
     justify-content: center;
-    gap: 20px; /* odstępy między przyciskami */
-    flex-wrap: wrap; /* opcjonalnie: pozwala zawijać na mniejszych ekranach */
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
@@ -219,3 +220,5 @@
         display: none;
     }
 }
+.ttt button.danger:hover { transform: translateY(-2px); background: linear-gradient(135deg, #631717, #771414);}
+

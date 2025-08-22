@@ -7,6 +7,10 @@ import Technologies from "./components/Technologies";
 import Hobbies from "./components/Hobbies";
 import Contact from "./components/Contact";
 import "./styles/Glass.css";
+import TicTacToe from "./components/TicTacToe";
+import Game2048 from "./components/Game2048";
+import Projects from "./components/Projects";
+import ChessAI from "./components/Chess";
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/hobbies" element={<Hobbies />} />
+          <Route path="/ticTacToe" element={<TicTacToe />} />
+          <Route path="/game2048" element={<Game2048 />} />
+          <Route path="/chess" element={<ChessAI />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
