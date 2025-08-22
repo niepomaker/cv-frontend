@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { usePointerSwipe } from "./UserPointerSwipe";
 
 // 2048 – czysta implementacja w React (1 plik)
 // Funkcje: sterowanie klawiaturą (strzałki/WASD), dotyk (gesty), wynik + najlepszy wynik (localStorage),
@@ -31,7 +32,8 @@ export default function Game2048() {
     .g2048 .tile{ position:absolute; display:grid; place-items:center; border-radius:10px; font-weight:800; transition: transform .12s ease, left .15s ease, top .15s ease, background .2s ease, color .2s ease; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
     .g2048 .tile.new{ animation: pop .18s ease-out; }
     .g2048 .tile.bump{ animation: bump .18s ease-out; }
-    
+    .g2048 .board { touch-action: none; -webkit-tap-highlight-color: transparent; }
+
     select {color: #e5e5e5; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(8px); border-radius: 8px; padding: 4px 8px;}
     select option { color: #000; background-color: #fff; }
 
@@ -60,7 +62,10 @@ export default function Game2048() {
   const [gameOver, setGameOver] = useState(false);
   const [won, setWon] = useState(false);
 
-  const boardRef = useRef(null);
+  const boardRef = usePointerSwipe((dir) => {
+    // dir = "left" | "right" | "up" | "down"
+    move(dir); // Twoja funkcja ruchu
+  });
   const [geom, setGeom] = useState({cell:0, gap:12});
 
   // compute grid background cells
@@ -290,7 +295,7 @@ export default function Game2048() {
           </div>
 
           <div className="boardWrap">
-            <div ref={boardRef} className="board" aria-label="Plansza 2048">
+            <div ref={boardRef} className="board" aria-label="Plansza 2048" tabIndex={0}>
               <div className="cells" style={{gridTemplateColumns:`repeat(${size}, 1fr)`, gridTemplateRows:`repeat(${size}, 1fr)`, gap: `${geom.gap}px`}}>
                 {cells.map(i=> <div key={i}/>) }
               </div>

@@ -27,8 +27,8 @@ export default function TicTacToe() {
     .ttt .score{display:flex; gap:10px; align-items:center}
     .ttt .badge{padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12)}
     .ttt .board.panel{padding:16px}
-    .ttt .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
-    .ttt .cell{ all:unset; display:grid; place-items:center; width:100%; aspect-ratio:1/1; font-size:48px; font-weight:800; letter-spacing:1px; color:var(--txt); background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.14); border-radius:16px; box-shadow:var(--shadow); transition:all .2s ease; cursor:pointer }
+    .ttt .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; touch-action: manipulation; }
+    .ttt .cell{-webkit-tap-highlight-color: transparent; all:unset; display:grid; place-items:center; width:100%; aspect-ratio:1/1; font-size:48px; font-weight:800; letter-spacing:1px; color:var(--txt); background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.14); border-radius:16px; box-shadow:var(--shadow); transition:all .2s ease; cursor:pointer }
     .ttt .cell:hover{ background:rgba(52,211,153,.25); transform:translateY(-2px); }
     .ttt .cell.selected{ background:rgba(52,211,153,.35) !important; border-color:var(--good) !important; }
     .ttt .cell.win{outline:3px solid var(--good); box-shadow:0 0 0 3px rgba(52,211,153,.25), var(--shadow)}
@@ -229,7 +229,12 @@ export default function TicTacToe() {
                                 <option value="hard">Hard</option>
                             </select>
                             <button className="primary" onClick={startRound}>New round</button>
-                            <button className="danger" onClick={() => { setScore({ p:0, a:0, d:0 }); setStatus("Wynik wyzerowany. Kliknij „Nowa runda”."); }}>Reset score</button>
+                            <button
+                                className="danger"
+                                onClick={() => { setScore({ p:0, a:0, d:0 }); setStatus("Wynik wyzerowany. Kliknij „Nowa runda”."); }}
+                            >
+                                Reset score
+                            </button>
                         </div>
                     </section>
 
@@ -247,9 +252,11 @@ export default function TicTacToe() {
                             {Array.from({ length: 9 }, (_, i) => (
                                 <button
                                     key={i}
+                                    type="button"
                                     className={`cell ${winLine.includes(i) ? "win" : ""} ${selectedCells.includes(i) ? "selected" : ""}`}
                                     aria-label={`Pole ${i + 1}`}
-                                    onClick={() => playerMove(i)}
+                                    onPointerUp={() => playerMove(i)}   // touch + mouse + pen
+                                    onClick={() => playerMove(i)}       // fallback (np. starsze przeglądarki)
                                     disabled={!!board[i] || !running || lock || current !== player}
                                 >
                                     {board[i] || ""}
@@ -262,5 +269,6 @@ export default function TicTacToe() {
                 </div>
             </div>
         </div>
+
     );
 }
