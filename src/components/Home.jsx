@@ -61,7 +61,7 @@ const Home = () => {
                         </NavLink>
 
                         <a
-                            href="/Łukasz-Paprot_CV.pdf"
+                            href="/Łukasz-Paprot_CV_eng.pdf"
                             download
                             style={{ textDecoration: "none" }}
                         >
