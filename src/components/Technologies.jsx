@@ -2,7 +2,17 @@ import React from "react";
 import "../styles/Technologies.css";
 import "../styles/Glass.css";
 
-import { FaJava, FaPython, FaGitAlt } from "react-icons/fa";
+import { FaJava, 
+    FaPython, 
+    FaGitAlt, 
+    FaCog,
+    FaServer,
+    FaNetworkWired,
+    FaDatabase,
+    FaFlask,
+    FaUsers
+} from "react-icons/fa";
+
 import {
     SiJavascript,
     SiSpring,
@@ -15,6 +25,12 @@ import {
     SiPycharm,
     SiIntellijidea,
     SiSwift,
+    SiGradle,
+    SiHibernate,
+    SiSpringboot,
+    SiDocker,
+    SiSplunk,
+    SiKibana
 } from "react-icons/si";
 
 import { TbSql } from "react-icons/tb";
@@ -34,14 +50,17 @@ const Technologies = () => {
             <div className="technologies-list">
                 <div className="glass-card tech-card">
                     <h3 className="technologies-position">Languages & Frameworks</h3>
-                    <div className="tech-item"><FaJava /> Java (Spring Boot)</div>
-                    <div className="tech-item"><SiReact /> React.js</div>
+                    <div className="tech-item"><FaJava /> Java</div>
+                    <div className="tech-item"><SiSpringboot /> Spring Boot</div>
+                    <div className="tech-item"><SiGradle /> Gradle</div>
+                    <div className="tech-item"><FaCog  /> Mockito</div>
+                    <div className="tech-item"><SiHibernate /> Hibernate/JPA</div>
                     <div className="tech-item"><FaPython /> Python (Flask)</div>
                     <div className="tech-item">
                         <SiPostgresql /> PostgreSQL, <SiOracle /> Oracle, <TbSql  /> MS SQL
                     </div>
                     <div className="tech-item">🧠 VBA (Excel, Access)</div>
-                    <div className="tech-item"><SiSwift /> Swift (iOS App – AlkoSearch)</div>
+                    <div className="tech-item"><SiSwift /> Swift (AlkoSearch)</div>
                 </div>
 
                 <div className="glass-card tech-card">
@@ -51,6 +70,18 @@ const Technologies = () => {
                     <div className="tech-item"><SiGooglecloud /> Google Cloud Platform (GCP)</div>
                     <div className="tech-item"><SiJenkins /> Jenkins</div>
                     <div className="tech-item"><FaGitAlt /> Git </div>
+                    <div className="tech-item"><SiDocker /> Docker</div>
+                    <div className="tech-item"><SiSplunk /> Splunk</div>
+                    <div className="tech-item"><SiKibana /> Kibana</div>
+                </div>
+
+                <div className="glass-card tech-card">
+                    <h3 className="technologies-position">Other</h3>
+                    <div className="tech-item"><FaServer /> REST APIs</div>
+                    <div className="tech-item"><FaNetworkWired /> Microservices</div>
+                    <div className="tech-item"><FaDatabase /> SQL</div>
+                    <div className="tech-item"><FaFlask /> Unit Testing</div>
+                    <div className="tech-item"><FaUsers /> Agile / Scrum </div>
                     <div className="tech-item"><VscAzureDevops /> DevOps methodologies</div>
                 </div>
             </div>

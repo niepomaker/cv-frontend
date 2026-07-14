@@ -7,7 +7,6 @@ export default function Hobbies() {
         { icon: <FaFlask />, label: "Mathematics & Physics" },
         { icon: <FaPlane />, label: "Traveling" },
         { icon: <FaDumbbell />, label: "Gym" },
-        { icon: <FaGamepad />, label: "Computer games" },
     ];
 
     return (

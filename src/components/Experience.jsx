@@ -8,38 +8,40 @@ const experiences = [
         company: "Netcompany",
         dates: "03.2025 – present",
         tasks: [
-            "Developed and delivered bugfixes based on task specifications and Jira tickets.",
-            "Investigated and analyzed application logs using Splunk and Kibana to identify and resolve issues.",
-            "Maintained the stability of data flow across distributed systems in a production environment.",
-            "Collaborated with the client to diagnose and resolve system behavior anomalies and application errors.",
-            "Supported system maintenance and ensured availability of backend services by monitoring integrations.",
-            "Participated in daily stand-ups and contributed to ongoing improvement of application reliability."
+            "Developing and maintaining backend applications using Java 17 and Spring Boot.",
+            "Delivering bug fixes and implementing changes based on business requirements and Jira tasks.",
+            "Investigating and troubleshooting production issues using Splunk and Kibana.",
+            "Monitoring and maintaining the stability of data flow across distributed systems.",
+            "Collaborating with clients and development teams to analyze and resolve application issues.",
+            "Supporting system maintenance and ensuring the availability of backend services and integrations.",
+            "Participating in daily stand-ups and contributing to the continuous improvement of application reliability and performance."
         ],
     },
     {
         position: "Junior System Administrator",
         company: "T-Mobile",
-        dates: "05.2024 – 03.2025",
+        dates: "05.2024 – 02.2025",
         tasks: [
-            "Creating application for finance sector in Access using VBA",
-            "Creating technical documentation for created applications",
-            "Creating a macro in excel using VBA",
-            "Creating queries to retrieve data from databases using PostgreSQL, Microsoft SQL Server and SQL Developer from Oracle",
-            "Validation of data from various databases",
-            "Writing procedures in the database to retrieve data for Access applications"
+            "Developing internal tools and applications to automate business processes in the financial sector.",
+            "Working with relational databases, including PostgreSQL, Microsoft SQL Server, and Oracle Database.",
+            "Designing SQL queries and database procedures to support internal applications.",
+            "Automating reporting and data-processing tasks using VBA and Microsoft Access.",
+            "Preparing technical documentation and validating data consistency across multiple systems.",
+            "Collaborating with business stakeholders to deliver reliable and efficient solutions."
         ],
     },
     {
         position: "Junior Java Developer",
-        company: "Bytamic Solutions",
+        company: "Bytamic",
         dates: "09.2023 – 03.2024",
         tasks: [
-            "Improving tests by using Mockito framework",
-            "Update classes using Spring framework",
-            "Using Jenkins to monitor project builds",
-            "Using GCP (Google Cloud Platform) to build and test new solutions",
-            "Working on the basis of DevOps methodologies",
-            "Taking part in daily gatherings and technical conversations related to the project in English.",
+            "Developing and maintaining backend components using Java 11 and Spring Boot.",
+            "Improving and extending automated tests using Mockito.",
+            "Implementing changes and updates based on project requirements.",
+            "Using Jenkins to monitor and maintain project builds.",
+            "Working with Google Cloud Platform (GCP) to build, test, and deploy solutions.",
+            "Collaborating with the development team in an Agile environment and participating in daily stand-ups and technical discussions.",
+            "Contributing to code quality and application reliability."
         ],
     },
     {
@@ -47,44 +49,29 @@ const experiences = [
         company: "Primaris Services",
         dates: "01.2022 – 03.2023",
         tasks: [
-            "Creating queries and querying data in SQL Server database",
-            "Programming data mapping in DataWeave (Java Framework)",
-            "Consulting integration results with the project team",
-            "Creating alerts and ensuring proper monitoring of systems",
-            "Working on the basis of DevOps methodologies",
-            "Participating in daily meetings and discussions in English on the technical side of the project"
+            "Developing data integration solutions using DataWeave and Java-based technologies.",
+            "Writing SQL queries and working with MySQL databases.",
+            "Designing and implementing data mappings between different systems.",
+            "Monitoring applications and configuring alerts to ensure system reliability.",
+            "Collaborating with developers and business teams to validate integration results.",
+            "Working according to DevOps and Agile methodologies."
         ],
     },
     {
         position: "IT Intern",
-        company: "Domański Zakrzewski Palinka",
+        company: "Domanski Zakrzewski Palinka (DZP)",
         dates: "01.2020 – 12.2021",
         tasks: [
-            "Creating small python scripts to fetch data from a page and send it to a database",
-            "Creating small macro in Excel by using Visual Basic",
-            "Creating macros for company employees in Office programs",
-            "Troubleshooting IT systems issues",
-            "Collaborate with staff performing tasks in the area of IT infrastructure and systems",
-            "Proactively monitoring station systems using monitoring tools and resolving detected problems",
-            "Assist users in the use of Excel along with the use of macros at an advanced level",
-            "Installing software on workstations",
-            "Supporting optimization processes and activities",
-            "Assisting in the implementation of InTune, a cloud-based service for managing mobile devices",
-            "Managing resources and user accounts from Active Directory and Azure AD in a hybrid structure",
-            "Practical application of MDM Intune in the organization"
+            "Providing technical support and troubleshooting IT infrastructure and system-related issues.",
+            "Developing automation scripts in Python to retrieve and process data.",
+            "Creating macros and automation tools in Microsoft Excel using VBA.",
+            "Supporting employees in the use of advanced Excel functionalities and Office applications.",
+            "Collaborating with IT teams to optimize internal processes and improve operational efficiency.",
+            "Managing user accounts and organizational resources in Active Directory and Azure Active Directory.",
+            "Installing and configuring software on employee workstations.",
+            "Supporting mobile device management (MDM) solutions within the organization."
         ],
-    },
-    {
-        position: "Constructor",
-        company: "Planet of Robots",
-        dates: "01.2019 – 01.2020",
-        tasks: [
-            "LEGO MindStorms robot builder",
-            "Robot programming",
-            "Conducting classes for children on the subject of programming (C++ and Python)\n",
-            "Camp educator",
-        ],
-    },
+    }
 ];
 
 const cardsPerPage = 3;
